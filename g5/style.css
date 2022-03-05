@@ -6,7 +6,6 @@
 }
 
 header .container {
-	min-width: 100%;
 	background: url("images/background5.jpg") no-repeat;
 	background-size: cover;
 	min-height: 110vh;
@@ -18,6 +17,11 @@ header .container {
    top: 0;
    width: 100%;
    z-index: 444;
+   background: #afefe6;
+   padding-bottom: 10px;
+}
+.row {
+	width: 100%;
 }
 
 header .container .row .col-10 {
@@ -29,7 +33,6 @@ header .container .row .col-10 {
 	padding-top: 1.1rem;
 }
 .toggle-bar {
-	/*display: none;*/
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
@@ -72,7 +75,6 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	position: absolute;
 	right: 10px;
 	top: 10px;
-
 }
 .col-2 .btn {
   	background: linear-gradient(90deg, #a148ff 0%, #ff6f45 100%);
@@ -214,6 +216,12 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	}
 }
 
+@media(max-width: 425px){
+	.main-hero-text{
+		font-size: 14px;
+		line-height: 0;
+	}
+}
 /*end here header section */
 
 /*start here service section*/
@@ -236,6 +244,11 @@ header .container .row .col-10 .col-6 ul li a:hover{
 }
 .hero-container .row-1 .main-head {
 	font-size: 50px;
+}
+@media(max-width: 768px){
+	.hero-container .row-1 .main-head {
+		font-size: 35px;
+	}
 }
 .col {
 	display: flex;
@@ -335,6 +348,11 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	text-align: left;
 	margin-left: 20px;
 }
+@media(max-width: 768px){
+	.main-hero-textarea h1 {
+		font-size: 35px;
+	}
+}
 .main-hero-textarea p {
 	line-height: 2;
 	letter-spacing: 1px;
@@ -380,8 +398,19 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	font-weight: bolder;
 	font-size: 30px;
 }
+@media(max-width: 425px){
+	.main-para {
+		font-size: 20px;
+	}
+}
 .bg-color {
 	background: none;
+}
+@media(max-width: 425px){
+	.bg-color {
+		padding: 0;
+		margin: 0;
+	}
 }
 .separator {
 	background: white;
@@ -498,11 +527,21 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	opacity: .8;
 	transition: all .5s ease-in-out;
 }
+@media(max-width: 425px){
+	.w-75{
+		padding: 30px;
+	}
+}
 .w-75:hover {
 	transform: scale(.9, .9);
 }
 .w-75 .fs-40{
 	font-size: 40px;
+}
+@media(max-width: 425px){
+	.w-75 .fs-40 {
+		font-size: 20px;
+	}
 }
 .w-75 h4 {
 	font-weight: bolder;
@@ -570,8 +609,8 @@ header .container .row .col-10 .col-6 ul li a:hover{
   background: transparent;
   transition: all .5s ease-in-out;
 }
+
 .accordion-text{
-	width: 60%;
 	transition: all .5s ease-in-out;
 }
 .panel {
@@ -591,9 +630,6 @@ header .container .row .col-10 .col-6 ul li a:hover{
   content: "\2716"; /* Unicode character for "minus" sign (-) */
   font-size: 18px;
   transition: all .5s ease-in-out;
-}
-.accordian-bg .row {
-	width: 100%;
 }
 .accordian-bg .w-75{
 	width: 90%;
@@ -632,6 +668,19 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	font-size: 30px;
 	text-transform: uppercase;
 }
+@media(max-width: 425px){
+	.accordion-text h1 {
+		font-size: 20px;
+	}
+	.accordion {
+		width: 100%;
+		font-size: 14px;
+	}
+	.accordion:after{
+		font-size: 14px;
+	}
+}
+
 /*accordian end here */
 
 /*clients section starts here*/
@@ -641,6 +690,7 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
 .clients-img {
 	width: 30%;
 	background: white;
@@ -650,6 +700,7 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	/*opacity: .5;*/
 	border: 1px solid white;
 	transition: all .5s ease-in-out;
+	margin: 20px 0;
 }
 .clients-img:hover{
 	transform: scale(1.2, 1.2);
@@ -660,8 +711,10 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	background-size: cover;
 	height: auto;
 }
-.mt-0{
-	margin-top: 0;
+@media(max-width: 900px){
+	.clients-img {
+		width: 100%;
+	}
 }
 /*hello section*/
 .hello-bg{
@@ -681,6 +734,11 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	opacity: .6;
 	box-shadow: 0px 0 10px 1px rgba(0,0,0,.4);
 	transition: all .5s ease-in-out;
+}
+@media(max-width: 425px){
+	.col--2{
+		width: 100%;
+	}
 }
 .col--2:hover {
 	transform: scale(1.2, 1.2);
@@ -717,12 +775,16 @@ header .container .row .col-10 .col-6 ul li a:hover{
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.contact-bg .row-1 {
+	width: 100%;
+}
 
 .contact-text {
 	text-align: left;
 	width: 100%;
 	padding: 50px;
 }
+
 .contact:hover {
 	transform: scale(0.9, .9);
 }
@@ -762,6 +824,25 @@ header .container .row .col-10 .col-6 ul li a:hover{
 .txt button:hover {
   	background: linear-gradient(90deg, #a148ff  0%, #ff6f45  100%);
 }
+@media(max-width: 900px){
+	.contact-text .txt {
+		flex-direction: column;
+	}
+	.txt input {
+		width: 100%;
+		margin-top: 10px;
+	}
+	
+}
+@media(max-width: 768px){
+	.contact-text {
+		margin: 0;
+		padding: 0;
+	}
+	.contact button {
+		font-size: 14px;
+	}
+}
 /*end here */
 
 /*footer section */
@@ -783,6 +864,18 @@ footer {
 .about-us{
 	width: 35%;
 }
+@media (max-width: 600px){
+	.footer-section {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.about-us {
+		margin-bottom: 20px;
+		font-size: 14px;
+		width: 100%;
+	}
+}
 .about-us h3 {
 	margin-bottom: 14px;
 	letter-spacing: 3px;
@@ -796,6 +889,9 @@ footer {
 	display: flex;
 	justify-content: space-around;
 }
+.company h3 {
+	letter-spacing: 1.5px;
+}
 .cts .company ul li{
 	list-style: none;
 	margin-top: 10px;
@@ -808,4 +904,12 @@ footer {
 }
 .cts .company ul li a:hover {
 	border-bottom: 1px solid;
+}
+@media(max-width: 786px){
+	.cts {
+		font-size: 12px;
+	}
+	.company {
+		margin-right: 10px;
+	}
 }
